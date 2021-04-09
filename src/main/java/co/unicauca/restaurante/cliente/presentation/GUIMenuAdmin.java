@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package co.unicauca.restaurante.cliente.presentation;
-
 /**
  *
- * @author Usuario
+ * @author Luis Arango
  */
 public class GUIMenuAdmin extends javax.swing.JFrame {
 
@@ -140,20 +133,18 @@ public class GUIMenuAdmin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarRestauranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarRestauranteActionPerformed
-        InterfazRegistrarRestaurante gp = new InterfazRegistrarRestaurante();
-        gp.setVisible(true);
-        this.dispose();
+        //TODO
     }//GEN-LAST:event_btnRegistrarRestauranteActionPerformed
 
     private void btnAddComponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddComponenteActionPerformed
-        GUIaddComponenteViewController gp = new GUIaddComponenteViewController();
-        gp.setVisible(true);
+        GUIaddComponenteViewController gc = new GUIaddComponenteViewController();
+        gc.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnAddComponenteActionPerformed
 
     private void btnAddDishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDishActionPerformed
-        GUIAddPlatoEspecialViewController gp = new GUIAddPlatoEspecialViewController();
-        gp.setVisible(true);
+        GUIAddPlatoEspecialViewController gpe = new GUIAddPlatoEspecialViewController();
+        gpe.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnAddDishActionPerformed
 
