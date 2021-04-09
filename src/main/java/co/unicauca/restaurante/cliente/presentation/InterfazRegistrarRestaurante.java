@@ -39,11 +39,11 @@ public class InterfazRegistrarRestaurante extends javax.swing.JFrame {
         jTextFieldNombreRestaurante = new javax.swing.JTextField();
         jTextDireccionRestaurante = new javax.swing.JTextField();
         jTextDescripcionRestaurante = new javax.swing.JTextField();
+        jPanelFondo = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
-        setIconImages(null);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButtonRegistrar.setBackground(new java.awt.Color(0, 102, 255));
@@ -54,7 +54,7 @@ public class InterfazRegistrarRestaurante extends javax.swing.JFrame {
                 jButtonRegistrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 110, 50));
+        getContentPane().add(jButtonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 110, 50));
 
         jButtonVolver.setBackground(new java.awt.Color(0, 102, 255));
         jButtonVolver.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -68,7 +68,7 @@ public class InterfazRegistrarRestaurante extends javax.swing.JFrame {
 
         jLabelTitulo.setFont(new java.awt.Font("Arial", 1, 27)); // NOI18N
         jLabelTitulo.setText("REGISTRAR RESTAURANTE");
-        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
 
         jLabelIdRestaurante.setBackground(new java.awt.Color(255, 255, 255));
         jLabelIdRestaurante.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -109,8 +109,11 @@ public class InterfazRegistrarRestaurante extends javax.swing.JFrame {
         jTextDescripcionRestaurante.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         getContentPane().add(jTextDescripcionRestaurante, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 200, 30));
 
+        jPanelFondo.setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().add(jPanelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 410, 470));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/RegistroRestaurante_img.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 0, 550, 470));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 0, 520, 470));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -176,6 +179,7 @@ public class InterfazRegistrarRestaurante extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelIdRestaurante;
     private javax.swing.JLabel jLabelNombreRestaurante;
     private javax.swing.JLabel jLabelTitulo;
+    private javax.swing.JPanel jPanelFondo;
     private javax.swing.JTextField jTextDescripcionRestaurante;
     private javax.swing.JTextField jTextDireccionRestaurante;
     private javax.swing.JTextField jTextFieldIdRestaurante;
