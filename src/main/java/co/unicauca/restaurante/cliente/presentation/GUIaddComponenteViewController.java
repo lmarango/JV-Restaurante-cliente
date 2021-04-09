@@ -32,14 +32,14 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        lbl_ImagenPlato = new javax.swing.JLabel();
-        btn_ImagenPlato = new javax.swing.JButton();
+        lbl_ImagenComponente = new javax.swing.JLabel();
+        btn_ImagenComponente = new javax.swing.JButton();
         btn_EditPlato = new javax.swing.JButton();
-        btn_Salir = new javax.swing.JButton();
+        btn_SalirComp = new javax.swing.JButton();
         txt_ComponenteID = new javax.swing.JTextField();
         txt_CompnenteNombre = new javax.swing.JTextField();
         txt_CompPrecio = new javax.swing.JTextField();
-        jcb_TipoComponente = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,13 +56,13 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
 
         jLabel5.setText("Precio:");
 
-        lbl_ImagenPlato.setBackground(new java.awt.Color(0, 0, 0));
-        lbl_ImagenPlato.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lbl_ImagenComponente.setBackground(new java.awt.Color(0, 0, 0));
+        lbl_ImagenComponente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        btn_ImagenPlato.setText("Elegir Imagen");
-        btn_ImagenPlato.addActionListener(new java.awt.event.ActionListener() {
+        btn_ImagenComponente.setText("Elegir Imagen");
+        btn_ImagenComponente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_ImagenPlatoActionPerformed(evt);
+                btn_ImagenComponenteActionPerformed(evt);
             }
         });
 
@@ -73,10 +73,10 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
             }
         });
 
-        btn_Salir.setText("Salir");
-        btn_Salir.addActionListener(new java.awt.event.ActionListener() {
+        btn_SalirComp.setText("Salir");
+        btn_SalirComp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_SalirActionPerformed(evt);
+                btn_SalirCompActionPerformed(evt);
             }
         });
 
@@ -86,7 +86,7 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
             }
         });
 
-        jcb_TipoComponente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Entrada", "Proteina", "Principio", "Bebida" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Entrada", "Proteina", "Principio", "Bebida" }));
 
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -111,20 +111,20 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
                                     .add(txt_ComponenteID)
                                     .add(txt_CompnenteNombre)
                                     .add(txt_CompPrecio)
-                                    .add(jcb_TipoComponente, 0, 159, Short.MAX_VALUE))
+                                    .add(jComboBox1, 0, 159, Short.MAX_VALUE))
                                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jPanel1Layout.createSequentialGroup()
                                         .add(66, 66, 66)
-                                        .add(lbl_ImagenPlato, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                                        .add(lbl_ImagenComponente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                        .add(btn_ImagenPlato, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                        .add(btn_ImagenComponente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                         .add(28, 28, 28))))))
                     .add(jPanel1Layout.createSequentialGroup()
                         .add(73, 73, 73)
                         .add(btn_EditPlato, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 113, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(29, 29, 29)
-                        .add(btn_Salir)))
+                        .add(btn_SalirComp)))
                 .add(19, 19, 19))
         );
         jPanel1Layout.setVerticalGroup(
@@ -147,7 +147,7 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
                         .add(18, 18, 18)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(jLabel4)
-                            .add(jcb_TipoComponente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(jLabel5)
@@ -155,12 +155,12 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 73, Short.MAX_VALUE)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(btn_EditPlato)
-                            .add(btn_Salir))
+                            .add(btn_SalirComp))
                         .add(28, 28, 28))
                     .add(jPanel1Layout.createSequentialGroup()
-                        .add(lbl_ImagenPlato, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(lbl_ImagenComponente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(btn_ImagenPlato)
+                        .add(btn_ImagenComponente)
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
@@ -178,18 +178,17 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_ImagenPlatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ImagenPlatoActionPerformed
+    private void btn_ImagenComponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ImagenComponenteActionPerformed
         // TODO add your handling code here:
-        JFileChooser j = new JFileChooser();
-        int ap= j.showOpenDialog(this);
-        if(ap == JFileChooser.APPROVE_OPTION){
-            ruta=j.getSelectedFile().getAbsolutePath();
-            lbl_ImagenPlato.setIcon(new ImageIcon(ruta));
-        }
-    }//GEN-LAST:event_btn_ImagenPlatoActionPerformed
+        //JFileChooser j = new JFileChooser();
+        //int ap= j.showOpenDialog(this);
+        //if(ap == JFileChooser.APPROVE_OPTION){
+          //  ruta=j.getSelectedFile().getAbsolutePath();
+          //}
+    }//GEN-LAST:event_btn_ImagenComponenteActionPerformed
 
     private void btn_EditPlatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditPlatoActionPerformed
-        IDishAccess service = DishFactory.getInstance().getDishService();
+        /*IComoAccess service = DishFactory.getInstance().getDishService();
         // Inyecta la dependencia
         DishService plateService = new DishService(service);
 
@@ -214,13 +213,13 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
 
         } catch (Exception ex) {
             successMessage(ex.getMessage(), "Atención");
-        }
+        }*/
     }//GEN-LAST:event_btn_EditPlatoActionPerformed
 
-    private void btn_SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirActionPerformed
+    private void btn_SalirCompActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirCompActionPerformed
         // TODO add your handling code here: Boton salir
         System.exit(0);
-    }//GEN-LAST:event_btn_SalirActionPerformed
+    }//GEN-LAST:event_btn_SalirCompActionPerformed
 
     private void txt_CompnenteNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_CompnenteNombreActionPerformed
         // TODO add your handling code here:
@@ -263,16 +262,16 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_EditPlato;
-    private javax.swing.JButton btn_ImagenPlato;
-    private javax.swing.JButton btn_Salir;
+    private javax.swing.JButton btn_ImagenComponente;
+    private javax.swing.JButton btn_SalirComp;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JComboBox<String> jcb_TipoComponente;
-    private javax.swing.JLabel lbl_ImagenPlato;
+    private javax.swing.JLabel lbl_ImagenComponente;
     private javax.swing.JTextField txt_CompPrecio;
     private javax.swing.JTextField txt_CompnenteNombre;
     private javax.swing.JTextField txt_ComponenteID;

@@ -104,11 +104,15 @@ public class GUISelector extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAccessMenuClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccessMenuClientActionPerformed
-        // TODO add your handling code here:
+        GUIMenuCliente gp = new GUIMenuCliente();
+        gp.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnAccessMenuClientActionPerformed
 
     private void btnAccessMenuAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAccessMenuAdminActionPerformed
-        // TODO add your handling code here:
+        GUIMenuAdmin gp = new GUIMenuAdmin();
+        gp.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnAccessMenuAdminActionPerformed
 
     /**

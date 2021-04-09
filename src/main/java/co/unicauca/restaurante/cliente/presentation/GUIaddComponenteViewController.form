@@ -64,16 +64,16 @@
                                       <Component id="txt_ComponenteID" max="32767" attributes="0"/>
                                       <Component id="txt_CompnenteNombre" alignment="0" max="32767" attributes="0"/>
                                       <Component id="txt_CompPrecio" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jcb_TipoComponente" alignment="0" pref="159" max="32767" attributes="0"/>
+                                      <Component id="jComboBox1" alignment="0" pref="159" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
                                           <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                                          <Component id="lbl_ImagenPlato" min="-2" pref="150" max="-2" attributes="0"/>
+                                          <Component id="lbl_ImagenComponente" min="-2" pref="150" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="btn_ImagenPlato" min="-2" pref="100" max="-2" attributes="0"/>
+                                          <Component id="btn_ImagenComponente" min="-2" pref="100" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -84,7 +84,7 @@
                           <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
                           <Component id="btn_EditPlato" min="-2" pref="113" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                          <Component id="btn_Salir" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_SalirComp" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
@@ -115,7 +115,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jcb_TipoComponente" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -125,14 +125,14 @@
                           <EmptySpace pref="73" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btn_EditPlato" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btn_Salir" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn_SalirComp" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="lbl_ImagenPlato" min="-2" pref="110" max="-2" attributes="0"/>
+                          <Component id="lbl_ImagenComponente" min="-2" pref="110" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btn_ImagenPlato" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_ImagenComponente" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -169,7 +169,7 @@
             <Property name="text" type="java.lang.String" value="Precio:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="lbl_ImagenPlato">
+        <Component class="javax.swing.JLabel" name="lbl_ImagenComponente">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="0" type="rgb"/>
@@ -181,12 +181,12 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_ImagenPlato">
+        <Component class="javax.swing.JButton" name="btn_ImagenComponente">
           <Properties>
             <Property name="text" type="java.lang.String" value="Elegir Imagen"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ImagenPlatoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_ImagenComponenteActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_EditPlato">
@@ -197,12 +197,12 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_EditPlatoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btn_Salir">
+        <Component class="javax.swing.JButton" name="btn_SalirComp">
           <Properties>
             <Property name="text" type="java.lang.String" value="Salir"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_SalirActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_SalirCompActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txt_ComponenteID">
@@ -214,7 +214,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txt_CompPrecio">
         </Component>
-        <Component class="javax.swing.JComboBox" name="jcb_TipoComponente">
+        <Component class="javax.swing.JComboBox" name="jComboBox1">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
