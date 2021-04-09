@@ -135,9 +135,9 @@ public class DishAccessImplSockets implements IDishAccess{
     private String findDishRequestJson(int idDish) {
 
         Protocol protocol = new Protocol();
-        protocol.setResource("plate");
+        protocol.setResource("Dish");
         protocol.setAction("get");
-        protocol.addParameter("id", String.valueOf(idDish));
+        protocol.addParameter("dishID", String.valueOf(idDish));
 
         Gson gson = new Gson();
         String requestJson = gson.toJson(protocol);
@@ -158,11 +158,11 @@ public class DishAccessImplSockets implements IDishAccess{
         Protocol protocol = new Protocol();
         protocol.setResource("plate");
         protocol.setAction("post");
-        protocol.addParameter("id", String.valueOf(plate.getDishID()));
-        protocol.addParameter("Name", plate.getDishName());
-        protocol.addParameter("Description", plate.getDishDescription());
-        protocol.addParameter("price", String.valueOf(plate.getDishPrice()));
-        protocol.addParameterIcon("email", plate.getDishImage());
+        protocol.addParameter("dishID", String.valueOf(plate.getDishID()));
+        protocol.addParameter("dishName", plate.getDishName());
+        protocol.addParameter("dishDescription", plate.getDishDescription());
+        protocol.addParameter("dishprice", String.valueOf(plate.getDishPrice()));
+        //protocol.addParameterIcon("dishImage", plate.getDishImage());
         
         Gson gson = new Gson();
         String requestJson = gson.toJson(protocol);

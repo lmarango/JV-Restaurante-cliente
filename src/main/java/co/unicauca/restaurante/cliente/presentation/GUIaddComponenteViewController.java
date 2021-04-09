@@ -170,6 +170,9 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
                         .addContainerGap(106, Short.MAX_VALUE))))
         );
 
+        btn_EditPlato.getAccessibleContext().setAccessibleDescription("");
+        btn_EditPlato.getAccessibleContext().setAccessibleParent(jLabel4);
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
