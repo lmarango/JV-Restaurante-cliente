@@ -161,7 +161,7 @@ public class ComponenteAccessImplSockets implements IComponenteAccess{
         protocol.addParameter("compName", comp.getCompNombre());
         protocol.addParameter("compType", comp.getTipo());
         protocol.addParameter("compPrice", String.valueOf(comp.getPrecio()));
-        protocol.addParameterIcon("compImage", comp.getCompImage());
+        //protocol.addParameterIcon("compImage", comp.getCompImage());
         
         Gson gson = new Gson();
         String requestJson = gson.toJson(protocol);

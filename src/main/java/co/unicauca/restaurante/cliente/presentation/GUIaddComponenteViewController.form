@@ -61,10 +61,10 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txt_ComponenteID" max="32767" attributes="0"/>
+                                      <Component id="txt_ComponenteID" pref="159" max="32767" attributes="0"/>
                                       <Component id="txt_CompnenteNombre" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txt_CompPrecio" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jComboBox1" alignment="0" pref="159" max="32767" attributes="0"/>
+                                      <Component id="txt_CompPrecio" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="txt_ComponenteTipo" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
@@ -112,17 +112,17 @@
                                   <Component id="txt_CompnenteNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txt_ComponenteTipo" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_CompPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="73" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btn_EditPlato" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btn_SalirComp" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -133,7 +133,7 @@
                           <Component id="lbl_ImagenComponente" min="-2" pref="110" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btn_ImagenComponente" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="106" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -214,20 +214,10 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txt_CompPrecio">
         </Component>
-        <Component class="javax.swing.JComboBox" name="jComboBox1">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Entrada"/>
-                <StringItem index="1" value="Proteina"/>
-                <StringItem index="2" value="Principio"/>
-                <StringItem index="3" value="Bebida"/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
+        <Component class="javax.swing.JTextField" name="txt_ComponenteTipo">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_ComponenteTipoActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

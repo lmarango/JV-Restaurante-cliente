@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 /**
  *
- * @author HP
+ * @author Tatiana Toquica
  */
 public class GUIAddPlatoEspecialViewController extends javax.swing.JFrame {
 
@@ -190,7 +190,6 @@ public class GUIAddPlatoEspecialViewController extends javax.swing.JFrame {
         plate.setDishName(txt_NomPlato.getText());
         plate.setDishDescription(txt_DescripPlato.getText());
         plate.setDishPrice(Double.parseDouble(txt_valorPlato.getText()));
-        //plate.setDishImage(Byte.valueOf(lbl_ImagenPlato.getText()));
 
         try {
             String response = plateService.save(plate);

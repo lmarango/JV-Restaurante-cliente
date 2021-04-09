@@ -78,6 +78,19 @@ public class Factory {
         }
         return result;
     }
+    
+    public IComponenteAccess getComponenteService(){
+        IComponenteAccess result = null;
+        
+        String type = Utilities.loadProperty("restaurant.service");
+
+        switch (type) {
+            case "default":
+                result = new ComponenteAccessImplSockets();
+                break;
+        }
+        return result;
+    }
 
     /**
      * Método que crea una instancia concreta de la jerarquia IUserAccess

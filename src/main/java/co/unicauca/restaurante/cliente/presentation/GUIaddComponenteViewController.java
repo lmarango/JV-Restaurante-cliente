@@ -1,10 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package co.unicauca.restaurante.cliente.presentation;
+import co.unicauca.restaurante.cliente.acces.IComponenteAccess;
+import co.unicauca.restaurante.cliente.acces.Factory;
+import static co.unicauca.restaurante.cliente.infra.Messages.successMessage;
+import co.unicauca.restaurante.cliente.domain.services.ComponenteService;
+import co.unicauca.restaurante.comunicacion.domain.Componente;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 
 /**
  *
@@ -13,6 +14,7 @@ package co.unicauca.restaurante.cliente.presentation;
 public class GUIaddComponenteViewController extends javax.swing.JFrame {
 
     /** Creates new form GUIaddComponenteViewController */
+    String ruta = null;
     public GUIaddComponenteViewController() {
         initComponents();
     }
@@ -39,7 +41,7 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
         txt_ComponenteID = new javax.swing.JTextField();
         txt_CompnenteNombre = new javax.swing.JTextField();
         txt_CompPrecio = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        txt_ComponenteTipo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,7 +88,11 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Entrada", "Proteina", "Principio", "Bebida" }));
+        txt_ComponenteTipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_ComponenteTipoActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -108,10 +114,10 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
                             .add(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(txt_ComponenteID)
+                                    .add(txt_ComponenteID, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
                                     .add(txt_CompnenteNombre)
-                                    .add(txt_CompPrecio)
-                                    .add(jComboBox1, 0, 159, Short.MAX_VALUE))
+                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, txt_CompPrecio)
+                                    .add(txt_ComponenteTipo))
                                 .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                                     .add(jPanel1Layout.createSequentialGroup()
                                         .add(66, 66, 66)
@@ -144,15 +150,15 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
                             .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                                 .add(jLabel3)
                                 .add(txt_CompnenteNombre, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
-                        .add(18, 18, 18)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel4)
-                            .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(18, 18, 18)
+                            .add(txt_ComponenteTipo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel4))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel5)
-                            .add(txt_CompPrecio, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 73, Short.MAX_VALUE)
+                            .add(txt_CompPrecio, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jLabel5))
+                        .add(89, 89, 89)
                         .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(btn_EditPlato)
                             .add(btn_SalirComp))
@@ -161,7 +167,7 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
                         .add(lbl_ImagenComponente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                         .add(btn_ImagenComponente)
-                        .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(106, Short.MAX_VALUE))))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
@@ -180,42 +186,47 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
 
     private void btn_ImagenComponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ImagenComponenteActionPerformed
         // TODO add your handling code here:
-        //JFileChooser j = new JFileChooser();
-        //int ap= j.showOpenDialog(this);
-        //if(ap == JFileChooser.APPROVE_OPTION){
-          //  ruta=j.getSelectedFile().getAbsolutePath();
-          //}
+        JFileChooser j = new JFileChooser();
+        int ap= j.showOpenDialog(this);
+        if(ap == JFileChooser.APPROVE_OPTION){
+            ruta=j.getSelectedFile().getAbsolutePath();
+        }
     }//GEN-LAST:event_btn_ImagenComponenteActionPerformed
 
     private void btn_EditPlatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditPlatoActionPerformed
-        /*IComoAccess service = DishFactory.getInstance().getDishService();
+        IComponenteAccess service = Factory.getInstance().getComponenteService();
         // Inyecta la dependencia
-        DishService plateService = new DishService(service);
+        ComponenteService compService = new ComponenteService(service);
 
-        Dish plate = new Dish();
-        plate.setDishID(Integer.parseInt(txt_IdPlato.getText()));
-        plate.setDishName(txt_NomPlato.getText());
-        plate.setDishDescription(txt_DescripPlato.getText());
-        plate.setDishPrice(Double.parseDouble(txt_valorPlato.getText()));
-        //plate.setDishImage(Byte.valueOf(lbl_ImagenPlato.getText()));
+        Componente comp = new Componente();
+        comp.setCompId(Integer.parseInt(txt_ComponenteID.getText()));
+        comp.setCompNombre(txt_CompnenteNombre.getText());
+        comp.setTipo(txt_ComponenteTipo.getText());
+        comp.setPrecio(Integer.parseInt(txt_CompPrecio.getText()));
+        //comp.setCompImage(Byte.valueOf(lbl_ImagenComponente.getText()));
 
         try {
-            Boolean response = plateService.update(plate);
+            Boolean response = compService.update(comp);
             if(response==true){
-                successMessage("Plato Especial fue modificado con éxito.", "Atención");
+                successMessage("Componente fue Agregado con éxito.", "Atención");
                 clearControls();
                 btn_EditPlato.setVisible(false);
             }else{
-                successMessage("Ocurrio un error al modificar el Plato Especial .", "Atención");
+                successMessage("Ocurrio un error al Agregar el componente.", "Atención");
                 clearControls();
                 btn_EditPlato.setVisible(false);
             }
 
         } catch (Exception ex) {
             successMessage(ex.getMessage(), "Atención");
-        }*/
+        }
     }//GEN-LAST:event_btn_EditPlatoActionPerformed
-
+public void clearControls() {
+        txt_ComponenteID.setText("");
+        txt_CompnenteNombre.setText("");
+        txt_CompPrecio.setText("");
+        lbl_ImagenComponente.setText("");       
+    }
     private void btn_SalirCompActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SalirCompActionPerformed
         // TODO add your handling code here: Boton salir
         System.exit(0);
@@ -224,6 +235,10 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
     private void txt_CompnenteNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_CompnenteNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_CompnenteNombreActionPerformed
+
+    private void txt_ComponenteTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ComponenteTipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_ComponenteTipoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -264,7 +279,6 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
     private javax.swing.JButton btn_EditPlato;
     private javax.swing.JButton btn_ImagenComponente;
     private javax.swing.JButton btn_SalirComp;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -275,6 +289,7 @@ public class GUIaddComponenteViewController extends javax.swing.JFrame {
     private javax.swing.JTextField txt_CompPrecio;
     private javax.swing.JTextField txt_CompnenteNombre;
     private javax.swing.JTextField txt_ComponenteID;
+    private javax.swing.JTextField txt_ComponenteTipo;
     // End of variables declaration//GEN-END:variables
 
 }
