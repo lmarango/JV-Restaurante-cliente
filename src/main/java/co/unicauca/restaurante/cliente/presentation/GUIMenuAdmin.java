@@ -28,63 +28,134 @@ public class GUIMenuAdmin extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnAddComponente = new javax.swing.JButton();
+        btnRegistrarRestaurante = new javax.swing.JButton();
+        btnAddDish = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 255));
         jLabel2.setText("Menu Administrador");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
-        jButton1.setText("Agregar Componente");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 140, -1));
+        btnAddComponente.setText("Agregar Componente");
+        btnAddComponente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddComponenteActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Registrar Restaurante");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
+        btnRegistrarRestaurante.setText("Registrar Restaurante");
+        btnRegistrarRestaurante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarRestauranteActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Agregar Plato especial");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
+        btnAddDish.setText("Agregar Plato especial");
+        btnAddDish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddDishActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Listar Componentes");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 140, -1));
 
         jButton5.setText("Listar Platos");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 140, -1));
 
         jButton6.setText("Editar Menu del día");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 140, -1));
 
         jButton7.setText("Editar Menu Especial");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, 140, -1));
 
-        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(layout.createSequentialGroup()
-                .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 280, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jLabel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
+        btnRegresar.setText("Regresar");
+
+        org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(40, 40, 40)
+                .add(jLabel2))
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(70, 70, 70)
+                .add(btnRegistrarRestaurante))
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(70, 70, 70)
+                .add(btnAddComponente, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(70, 70, 70)
+                .add(jButton4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(70, 70, 70)
+                .add(btnAddDish))
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(70, 70, 70)
+                .add(jButton5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(70, 70, 70)
+                .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(70, 70, 70)
+                .add(jButton7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 140, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .add(btnRegresar)
+                .add(26, 26, 26))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .add(jLabel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jPanel1Layout.createSequentialGroup()
+                .add(20, 20, 20)
+                .add(jLabel2)
+                .add(27, 27, 27)
+                .add(btnRegistrarRestaurante)
+                .add(7, 7, 7)
+                .add(btnAddComponente)
+                .add(7, 7, 7)
+                .add(jButton4)
+                .add(7, 7, 7)
+                .add(btnAddDish)
+                .add(7, 7, 7)
+                .add(jButton5)
+                .add(7, 7, 7)
+                .add(jButton6)
+                .add(7, 7, 7)
+                .add(jButton7)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 77, Short.MAX_VALUE)
+                .add(btnRegresar)
+                .add(20, 20, 20))
         );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 290, 393));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegistrarRestauranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarRestauranteActionPerformed
+        InterfazRegistrarRestaurante gp = new InterfazRegistrarRestaurante();
+        gp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRegistrarRestauranteActionPerformed
+
+    private void btnAddComponenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddComponenteActionPerformed
+        GUIaddComponenteViewController gp = new GUIaddComponenteViewController();
+        gp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnAddComponenteActionPerformed
+
+    private void btnAddDishActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDishActionPerformed
+        GUIAddPlatoEspecialViewController gp = new GUIAddPlatoEspecialViewController();
+        gp.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnAddDishActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,14 +193,14 @@ public class GUIMenuAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnAddComponente;
+    private javax.swing.JButton btnAddDish;
+    private javax.swing.JButton btnRegistrarRestaurante;
+    private javax.swing.JButton btnRegresar;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
