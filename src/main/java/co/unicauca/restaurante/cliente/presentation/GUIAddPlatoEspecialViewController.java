@@ -1,6 +1,6 @@
 
 package co.unicauca.restaurante.cliente.presentation;
-import co.unicauca.restaurante.cliente.acces.DishFactory;
+import co.unicauca.restaurante.cliente.acces.Factory;
 import co.unicauca.restaurante.cliente.acces.IDishAccess;
 import co.unicauca.restaurante.cliente.domain.services.DishService;
 import static co.unicauca.restaurante.cliente.infra.Messages.successMessage;
@@ -181,7 +181,7 @@ public class GUIAddPlatoEspecialViewController extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_NomPlatoActionPerformed
 
     private void btn_AddPlatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AddPlatoActionPerformed
-        IDishAccess service = DishFactory.getInstance().getDishService();
+        IDishAccess service = Factory.getInstance().getDishService();
         // Inyecta la dependencia
         DishService plateService = new DishService(service);
 

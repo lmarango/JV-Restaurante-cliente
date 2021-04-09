@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package co.unicauca.restaurante.cliente.presentation;
-import co.unicauca.restaurante.cliente.acces.DishFactory;
+import co.unicauca.restaurante.cliente.acces.Factory;
 import co.unicauca.restaurante.cliente.acces.IDishAccess;
 import co.unicauca.restaurante.cliente.domain.services.DishService;
 import static co.unicauca.restaurante.cliente.infra.Messages.successMessage;
@@ -192,7 +192,7 @@ public class GUIEditPlatoEspecialViewController extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_EditPlatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_EditPlatoActionPerformed
-        IDishAccess service = DishFactory.getInstance().getDishService();
+        IDishAccess service = Factory.getInstance().getDishService();
         // Inyecta la dependencia
         DishService plateService = new DishService(service);
 
@@ -242,7 +242,7 @@ public class GUIEditPlatoEspecialViewController extends javax.swing.JFrame {
     private void btn_BuscarIdPlateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BuscarIdPlateActionPerformed
         String id = txt_IdPlato.getText().trim();
 
-        IDishAccess service = DishFactory.getInstance().getDishService();
+        IDishAccess service = Factory.getInstance().getDishService();
         // Inyecta la dependencia
         DishService plateService = new DishService(service);
         if (id.equals("")) {
