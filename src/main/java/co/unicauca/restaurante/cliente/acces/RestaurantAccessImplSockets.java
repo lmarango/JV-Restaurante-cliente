@@ -4,6 +4,7 @@ import co.unicauca.restaurante.comunicacion.domain.Restaurant;
 import co.unicauca.restaurante.cliente.infra.RestaurantSocket;
 import co.unicauca.restaurante.comunicacion.infra.JsonError;
 import co.unicauca.restaurante.comunicacion.infra.Protocol;
+import com.google.gson.reflect.TypeToken;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.util.List;
